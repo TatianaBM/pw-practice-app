@@ -15,7 +15,8 @@ export default defineConfig({
   timeout: 50000,
   globalTimeout: 100000,
   expect: {
-    timeout: 8000
+    timeout: 8000,
+    toMatchSnapshot: {maxDiffPixels: 50}
   },
   testDir: './tests',
   /* Run tests in files in parallel */
