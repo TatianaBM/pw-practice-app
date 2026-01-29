@@ -13,7 +13,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   timeout: 50000,
-  globalTimeout: 100000,
+  //globalTimeout: 100000,
   expect: {
     timeout: 8000,
     toMatchSnapshot: {maxDiffPixels: 50}
@@ -79,9 +79,9 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
+  webServer: {
+    command: 'npm run start',
+    url: 'http://localhost:4200',
   //   reuseExistingServer: !process.env.CI,
-  // },
+  },
 });

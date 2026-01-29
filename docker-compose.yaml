@@ -1,0 +1,11 @@
+services:
+  playwright-tests:
+    image: pw-tests
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    command: npm run UI:chrom  
+    volumes:
+      - ./playwright-report/:/app/playwright-report
+      - ./test-results/:/app/test-results
+  
