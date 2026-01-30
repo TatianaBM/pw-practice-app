@@ -10,8 +10,8 @@
     "ng": "ng",
     "start": "ng serve",
     "run:tests": "npx playwright test",
-    "chromium": "npm run run:tests --project=chromium",
-    "UI:chrom": "npm run chromium uiComponents.spec.ts"
+    "UI": "npm run run:tests -- uiComponents.spec.ts visualTestingArgos.spec",
+    "UI:chrom": "npm run UI -- --project=chromium"
   },
   "overrides": {
     "stylus": "github:stylus/stylus#0.54.5"
@@ -63,6 +63,7 @@
     "@angular/cli": "^14.2.10",
     "@angular/compiler-cli": "^14.2.12",
     "@angular/language-service": "14.2.12",
+    "@argos-ci/playwright": "^6.4.0",
     "@compodoc/compodoc": "^1.1.19",
     "@faker-js/faker": "10.2.0",
     "@fortawesome/fontawesome-free": "^5.2.0",
