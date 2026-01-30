@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { PageManager } from '../page-objects/pageManager'
+import { argosScreenshot } from '@argos-ci/playwright'
 
 test.beforeEach(async ({page}) => {
     await page.goto('http://localhost:4200/')
@@ -35,4 +36,12 @@ test('Range datePicker', async ({page}) => {
     const pm = new PageManager(page)
     await pm.navigateTo().datePickerPage()
     await pm.ondatePickerPage().selectDatePickerWithRangeFromToday(1, 4)
+})
+
+test('visual testing with argo', async({page}) => {
+    const pm = new PageManager(page)
+    await pm.navigateTo().formLayoutsPage()
+    await argosScreenshot(page, 'this is form layouts page')
+    await pm.navigateTo().datePickerPage()
+    await argosScreenshot(page, 'this is date picker page')
 })
