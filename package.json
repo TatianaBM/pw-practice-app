@@ -11,7 +11,7 @@
     "start": "ng serve",
     "run:tests": "npx playwright test",
     "chromium": "npm run run:tests --project=chromium",
-    "UI:chrom": "npm run chromium uiComponents.spec.ts"
+    "UI:chrom": "npm run chromium uiComponents.spec.ts visualTestingArgos.spec"
   },
   "overrides": {
     "stylus": "github:stylus/stylus#0.54.5"
